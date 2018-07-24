@@ -1,11 +1,13 @@
 # CookieHeist
 PHP Cookie Stealing Scripts for use in XSS
 
-1. Cookiesteal-simple.php - Records whatever "c" parameter holds, in example case the document.cookie string. Then writes value to log.txt and redirects to Google.com.
+1. Cookiesteal-simple.php - Records whatever "c" parameter holds, in example case the document.cookie string, writes value to cookielog.txt. 
 
-2. Cookiemail.php - This version code will mail the cookies to hacker mail using the PHP() mail function with subject “Stolen cookies”.
+2. Cookiesteal-simple-v2.php - Records whatever "c" parameter holds, writes value to cookielog.txt and redirects to Google.com.
 
-3. Cookiesteal-v.php (verbose) - Collects the IP address, port number, host(usually computer-name), user agent and cookie.
+3. Cookiemail.php - This version code will mail the cookies to hacker mail using the PHP() mail function with subject “Stolen cookies”.
+
+4. Cookiesteal-v.php (verbose) - Collects the IP address, port number, host(usually computer-name), user agent and cookie.
 
 ## Usage
 
