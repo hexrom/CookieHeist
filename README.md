@@ -36,7 +36,7 @@ Example: http://[Attacker Webserver]/cookiesteal-simple.php
 
 ##### Setting Permissions:
 
-Figure out which user is owning httpd process using the following command
+Figure out which user is owning httpd process using the following command:
 
 ps aux | grep httpd
 
