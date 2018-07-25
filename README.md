@@ -34,7 +34,7 @@ sudo mv cookiestealer-simple.php /var/www/html/
 
 Example: http://[Attacker Webserver]/cookiesteal-simple.php
 
-**_Setting Permissions**_:
+##### Setting Permissions:
 
 Figure out which user is owning httpd process using the following command
 
