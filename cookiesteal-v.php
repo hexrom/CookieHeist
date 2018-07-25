@@ -36,4 +36,7 @@ function logData()
     fclose($log); 
 } 
 logData(); 
+
+echo '<b>All Your Cookies Are Belong To Us!</b>'
+
 ?>
