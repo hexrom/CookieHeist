@@ -9,9 +9,9 @@ PHP Cookie Stealing Scripts for use in XSS
 
 ## Usage
 1. On the remote attacker machine, start the webserver (Apache2 in example):
-
+'''
 sudo service apache2 start
-
+'''
 2. Git clone the repo locally and then push the chosen "Cookie stealer" PHP script from local host to the attacking machine
 
 
